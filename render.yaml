@@ -1,0 +1,18 @@
+# Render Blueprint for the Meetly backend.
+# In Render: New + → Blueprint → connect this repo. Render reads this file.
+# Then set the MONGO_URI (and optionally CORS_ORIGIN) env vars in the dashboard.
+services:
+  - type: web
+    name: meetly-backend
+    runtime: node
+    plan: free
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /
+    autoDeploy: true
+    envVars:
+      - key: MONGO_URI
+        sync: false # set manually in the Render dashboard (secret)
+      - key: CORS_ORIGIN
+        sync: false # e.g. https://your-frontend.vercel.app

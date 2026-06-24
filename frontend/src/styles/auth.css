@@ -1,0 +1,117 @@
+/* Meetly — authentication page */
+.authShell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+}
+
+.authBrand {
+  position: relative;
+  padding: 56px 52px;
+  display: flex;
+  align-items: center;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(139, 92, 246, 0.25), transparent 55%),
+    linear-gradient(160deg, #16121f 0%, #0a0a12 100%);
+  border-right: 1px solid var(--border);
+}
+
+.authBrandHeadline {
+  font-size: 2.3rem !important;
+  font-weight: 800 !important;
+  line-height: 1.15 !important;
+  letter-spacing: -0.02em;
+  margin-top: 36px !important;
+  max-width: 460px;
+}
+
+.authBrandSub {
+  color: var(--text-muted) !important;
+  font-size: 1.05rem !important;
+  margin-top: 16px !important;
+  max-width: 420px;
+}
+
+.authPerks {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.authPerk {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.authPerkIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 11px;
+  display: grid;
+  place-items: center;
+  background: rgba(139, 92, 246, 0.15);
+  color: var(--brand-400);
+}
+
+.authFormPanel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 28px;
+}
+
+.authForm {
+  width: 100%;
+  max-width: 400px;
+  animation: fadeUp 0.5s ease both;
+}
+
+.authTabs {
+  display: flex;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 5px;
+  margin-bottom: 8px;
+}
+
+.authTab {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: 9px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.18s;
+}
+
+.authTab.active {
+  background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+  color: #fff;
+}
+
+.authSwitchLink {
+  color: var(--brand-400);
+  font-weight: 600;
+  cursor: pointer;
+}
+.authSwitchLink:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 860px) {
+  .authShell {
+    grid-template-columns: 1fr;
+  }
+  .authBrand {
+    display: none;
+  }
+}

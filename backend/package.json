@@ -1,0 +1,28 @@
+{
+  "name": "meetly-backend",
+  "version": "1.0.0",
+  "description": "Meetly backend — Express + Socket.io signaling server and REST API for the Meetly video meeting app.",
+  "main": "src/app.js",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "dev": "nodemon src/app.js",
+    "start": "node src/app.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^17.4.2",
+    "express": "^4.18.2",
+    "http-status": "^1.7.3",
+    "mongoose": "^8.0.3",
+    "socket.io": "^4.7.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}
