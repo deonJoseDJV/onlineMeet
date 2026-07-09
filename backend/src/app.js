@@ -14,9 +14,10 @@ const io = connectToSocket(server);
 const PORT = process.env.PORT || 8000;
 
 // Allow all origins by default, or restrict via CORS_ORIGIN (comma-separated).
-const corsOrigin = process.env.CORS_ORIGIN
-  ? process.env.CORS_ORIGIN.split(",").map((o) => o.trim())
-  : "*";
+// const corsOrigin = process.env.CORS_ORIGIN
+//   ? process.env.CORS_ORIGIN.split(",").map((o) => o.trim())
+//   : "*";
+app.use(cors());
 
 app.set("port", PORT);
 // app.use(cors({ origin: corsOrigin }));
